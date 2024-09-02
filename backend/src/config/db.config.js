@@ -1,15 +1,14 @@
 /**
- * Arquivo responsável por fazer a conexão com o banco de dados: MongoDB
+ * description: arquivo responsável por fazer a conexão com a base de dados: MongoDB'
  */
 
-const dotenv = require("dotenv");
+const dotenv = require('dotenv');
+
 dotenv.config();
 
 module.exports = {
-   local: {
-       localDatabaseUrl: process.env.LOCAL_DATABASE_URL,
-       secret: "password"
-   }
-}
-
-
+  local: {
+    localUrlDatabse: process.env.DB_URI,
+    secret: 'password',
+  },
+};
