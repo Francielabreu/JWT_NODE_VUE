@@ -1,19 +1,17 @@
 /**
- * descrição: Arquivo responsável pela configuração das rotas da 'API'
+ * description: arquivo responsável pela rota default da aplicação
  */
 
-const express = require("express");
+const express = require('express');
+
 const router = express.Router();
 
-//TODO: Declarar rotas
-
-router.get("/api/v1", (req, res) => {
-    res.status(200).json({ 
-        success: true,
-        message: "seja bem vindo(a) a API NodeJS + MongoDB!" ,
-        version: "1.0.0"
-    })
-    
-})
+router.get('/api/v1', (req, res) => {
+  res.status(200).send({
+    success: true,
+    message: 'Seja bem-vindo(a) a API Node.js + MongoDB',
+    version: '1.0.0',
+  });
+});
 
 module.exports = router;
